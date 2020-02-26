@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="jumbotron">
+<h1>Welcome to puppy survey</h1>
+</div>
+<div class ="container">
+<form method="POST">
+
+  {{ form.hidden_tag() }}
+  {{ form.breed.label }} {{ form.breed}}
+  <br>
+  {{ form.neutured.label }} {{ form.neutured}}
+  <br>
+  {{ form.radio.label }} {{ form.radio}}
+  {{ form.food_choice.label }} {{ form.food_choice}}
+  <br>
+  Any other feedback? <br> {{ form.feedback}}
+  <br>
+  {{ form.submit}}
+  <br>
+</form>
+</div>
+{% endblock %}

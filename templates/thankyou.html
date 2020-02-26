@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="jumbotron">
+<h1>Here is the information that you gave</h1>
+</div>
+{% for mess in get_flashed_messages() %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    {{ mess }}
+  </button>
+</div>
+{% endfor %}
+<ul>
+  <li>{{ session['breed'] }}</li>
+  <li>{{ session['neutured'] }}</li>
+  <li>{{ session['radio'] }}</li>
+  <li>{{ session['food_choice'] }}</li>
+  <li>{{ session['feedback'] }}</li>
+</ul>
+{% endblock %}
